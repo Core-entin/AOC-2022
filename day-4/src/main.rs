@@ -14,6 +14,9 @@ fn main() {
         // Consumes the iterator, returns an (Optional) String
         for line in lines {
             if let Ok(ip) = line {
+                if !reg.is_match(&ip) {
+                    println!("What the shit");
+                }
                 // Logic
                 for l in reg.captures_iter(&ip) {
                     // Ugly parsing :(
