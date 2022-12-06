@@ -7,7 +7,7 @@ fn main() {
         for c in content.chars() {
             chars.push(c);
             index += 1;
-            if chars.len() == 14 {
+            if chars.len() == 14 { // 4 instead of 14 for part 1
                 let mut is_index = true;
 
                 for i in &chars { // &char for filter below
@@ -29,6 +29,4 @@ fn main() {
             }
         }
     }
-
-    // println!("Value is {}", value);
 }
