@@ -13,7 +13,7 @@ fn main() {
         }
     }
 
-    println!("Max is {}", max[0] + max[1] + max[2]);
+    // println!("Value is {}", value);
 }
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
