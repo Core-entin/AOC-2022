@@ -29,7 +29,7 @@ fn main() {
         for line in lines {
             if let Ok(ip) = line {
                 if step_reg.is_match(&ip) {
-                    let caps   = step_reg.captures(&ip).unwrap(),
+                    let caps   = step_reg.captures(&ip).unwrap();
                     let amount = caps[1].parse::<usize>().unwrap();
                     let from   = caps[2].parse::<usize>().unwrap() - 1;
                     let to     = caps[3].parse::<usize>().unwrap() - 1;
