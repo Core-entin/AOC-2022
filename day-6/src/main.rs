@@ -9,9 +9,12 @@ fn main() {
             index += 1;
             if chars.len() == 14 {
                 let mut is_index = true;
-                for i in &chars {
-                    let copy = chars.to_vec();
+
+                for i in &chars { // &char for filter below
+                    let copy = chars.to_vec(); // Copy because into_iter() borrow the vector
                     let dupes = copy.into_iter().filter(|x| x == i).collect::<Vec<char>>();
+
+                    // If at least one dupe
                     if dupes.len() > 1 {
                         is_index = false;
                         break;
